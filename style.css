@@ -1,0 +1,156 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(153, 0, 153) ;
+    font-weight: 100;
+}
+
+.venus-images-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -2;
+}
+
+.venus-images {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.clock_face{
+    width: 80vmin;
+    height: 80vmin;
+    border: 3px solid green;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.clock_face::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: calc(50% - 10px);
+    top: calc(50% - 10px);
+    border-radius: 50%;
+    background-color: yellow;
+}
+
+.clock_face::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 94%;
+    height: 94%;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 251, 0);
+}
+
+.clock_heading {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3.5px;
+    color: blue;
+    margin-bottom: 22vmin;
+}
+
+#hours {
+    background: mediumseagreen;
+    position: absolute;
+    bottom: calc(50% - 40px);
+}
+
+#minutes{
+    background: red;
+    position: absolute;
+    bottom: calc(50% - 40px);
+}
+ #seconds {
+    background:orange;
+    position: absolute;
+    bottom: calc(50% - 40px);
+ }
+
+ .clock_hours{
+    width: 6px;
+    height: 30%;
+    left: calc(50% - 2px);
+    transform: rotate(45deg);
+    transform-origin: 2px calc(100% - 40px);
+    }
+
+.clock_minutes{
+    width: 4px;
+    height: 40%;
+    left: calc(50% - 2px);
+    transform: rotate(35deg);
+    transform-origin: 2px calc(100% - 40px);
+    text-align: left;
+}
+
+.clock_seconds{
+    width: 3px;
+    height: 50%;
+    left: calc(50% - 1px);
+    transform: rotate(65deg);
+    transform-origin: 1px calc(100% - 40px);
+}
+
+.countdown{
+    text-align: center;
+    color: rgb(25, 233, 205);
+}
+
+.countdown_heading {
+ font-weight: 120;
+ font-size: 25px;
+ font-style: bold;
+}
+
+.countdown_body {
+    display: flex;
+    font-size: 23px;
+}
+
+.countdown_days::after {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100px;
+    content: "D ";
+    color:black;
+}
+.countdown_hours::after {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100px;
+    content: "h";
+    color:black;
+}
+
+.countdown_minutes::after {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100px;
+    content: "m ";
+    color:black;
+}
+
+.countdown_seconds::after {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100px;
+    content: "s";
+    color:black;
+}
